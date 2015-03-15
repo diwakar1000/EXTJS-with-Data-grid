@@ -1,5 +1,6 @@
 Ext.require['*'],
 //Creating a new instace of the application.
+// This is just an example.
 Ext.application({
 	requires : ['Ext.container.Viewport'],
 	name : 'AM', // defining the global variable.which in turn have the logical name of the application.
