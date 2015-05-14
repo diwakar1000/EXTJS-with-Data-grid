@@ -16,8 +16,7 @@ Ext.define('AM.controller.MyTaskController', {
             },
             
             	'viewport button[action=add]':{
-            		click:this.dataAdd,
-            		renderTo: 'centerclass'
+            		click:this.dataAdd
             	},
             'viewport button[text= "My Projects"]':{
             	click: this.projectpage,
@@ -39,10 +38,11 @@ Ext.define('AM.controller.MyTaskController', {
         this.getUsersStore().sync();
    },
   dataAdd: function(form) {
-     Ext.widget('searchform');
+     var wedgetSearch = Ext.widget('searchform');
+     wedgetSearch.renderTo ='centerclass'
     },
    projectpage: function (form){
-   	 Ext.widget ('myproject');
-   	//project.dowm ('form').loadRecord (record)
+   	 var project= Ext.widget ('myproject');
+   	project.dowm ('form').loadRecord (record)
    }
 });
